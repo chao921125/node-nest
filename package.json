@@ -55,7 +55,7 @@
       "bin-wrapper": "npm:bin-wrapper-china",
       "mysql": "2.18.1"
   },
-  "main": "react-vite",
+  "main": "src/main.ts",
   "types": "react-vite",
   "author": {
       "name": "chao921125",
