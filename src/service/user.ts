@@ -1,15 +1,14 @@
-import { Injectable } from "@nestjs/common";
-import { User } from "src/interface/user";
+import { Provide } from '@midwayjs/core';
+import { IUserOptions } from '../interface';
 
-@Injectable()
+@Provide()
 export class UserService {
-  private users: User[] = [];
-
-  createUser(user: User) {
-    this.users.push(user);
-  }
-
-  login(user: User) {
-    return user;
+  async getUser(options: IUserOptions) {
+    return {
+      uid: options.uid,
+      username: 'mockedName',
+      phone: '12345678901',
+      email: 'xxx.xxx@xxx.com',
+    };
   }
 }
